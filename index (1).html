@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ucapan Selamat</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 60px 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transform: scale(0.95);
+            animation: scaleIn 1s ease forwards;
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 60px;
+            color: #FF6F91;
+            margin-bottom: 20px;
+            animation: slideDown 1.5s ease forwards;
+        }
+
+        p {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 40px;
+            opacity: 0.85;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background: #FF6F91;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 111, 145, 0.4);
+            animation: buttonPop 2s ease forwards;
+        }
+
+        .btn:hover {
+            background: #ff96b3;
+            transform: scale(1.05);
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes buttonPop {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1 id="greeting">Selamat!</h1>
+            <p id="message">happy girlfriends</p>
+            <button class="btn" onclick="changeMessage()">pencet</button>
+        </div>
+    </div>
+
+    <script>
+        function changeMessage() {
+            const messageElement = document.getElementById("message");
+            const greetingElement = document.getElementById("greeting");
+
+            messageElement.textContent = "happy girlfriends yaaa walapun aku cuma sekedar mantan hehehe kamu harus happy teru yaaa🩷🩷";
+            greetingElement.textContent = "happy terus yaaa";
+            
+            const button = document.querySelector(".btn");
+            button.textContent = "Selamat!";
+            button.style.backgroundColor = "#ff96b3";
+        }
+    </script>
+</body>
+</html>
